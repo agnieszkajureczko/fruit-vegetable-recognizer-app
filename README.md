@@ -1,7 +1,5 @@
 # Fruit and vegetable recognizer app
 
-The technologies used in project: Javascript, CSS, HTML, Python, Flask.
-
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
