@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Warzywniak</title>
+    <link rel="stylesheet" href="static/css/style_results.css">
+    <link rel="shortcut icon" href="{{url_for('static', filename = 'images/favicon.ico')}}">
+    <script src="static/js/results.js?newversion"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container-header">
+        <header class="header">
+            <a class="link-title" href="/">Zgadnij co to!</a>
+            <a href="/"><button id = "home">POWRÓT</button></a>
+        </header>
+    </div>
+
+    <div class="container-main">
+        <div class="container-table">
+            <table>
+                <thead id="thead">
+                    <tr>
+                        <th></th>
+                        <th>Ranking</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for fruit in fruits %}
+                    <tr>
+                        <td><img src = {{fruit['image']}}></td>
+                        <td>{{ fruit['fruit'] }}</td>
+                        <td>{{ fruit['prediction'] }}% </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+        <div class="container-results">
+            <h1>Statystyki</h1>
+
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="static/images/heatmap.jpg">
+                        <img src="static/images/heatmap.jpg" alt="map">
+                    </a>
+                    <div class="desc">Mapa ciepła</div>
+                </div>
+            </div>
+            
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
